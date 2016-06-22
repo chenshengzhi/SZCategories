@@ -17,6 +17,7 @@
     self.layer.cornerRadius = radius;
     self.layer.borderColor = color.CGColor;
     self.layer.borderWidth = size;
+    self.layer.masksToBounds = YES;
 }
 
 - (void)setRoundedCorners:(UIRectCorner)corners radius:(CGFloat)radius {
