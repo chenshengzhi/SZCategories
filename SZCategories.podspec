@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
     s.name         = "SZCategories"
-    s.version      = "0.0.2"
+    s.version      = "0.0.3"
     s.summary      = "some useful categories"
     s.homepage     = "https://github.com/chenshengzhi/SZCategories"
     s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -76,13 +76,18 @@ Pod::Spec.new do |s|
             sss.frameworks   = 'Foundation', 'UIKit'
         end
 
+        ss.subspec 'UIFont' do |sss|
+            sss.source_files = 'SZCategories/UIKit/UIFont/*.{h,m}'
+            sss.frameworks   = 'Foundation', 'UIKit'
+        end
+
         ss.subspec 'UIImage' do |sss|
             sss.source_files = 'SZCategories/UIKit/UIImage/*.{h,m}'
             sss.frameworks   = 'Foundation', 'UIKit'
         end
 
-        ss.subspec 'UILable' do |sss|
-            sss.source_files = 'SZCategories/UIKit/UILable/*.{h,m}'
+        ss.subspec 'UILabel' do |sss|
+            sss.source_files = 'SZCategories/UIKit/UILabel/*.{h,m}'
             sss.frameworks   = 'Foundation', 'UIKit'
         end
 

@@ -31,7 +31,6 @@
 		2417A8621D1935B600F88B15 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 2417A7E71D1935B600F88B15 /* UIColor+Random.m */; };
 		2417A8671D1935B600F88B15 /* UIImage+ColorCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2417A7F21D1935B600F88B15 /* UIImage+ColorCreate.m */; };
 		2417A8691D1935B600F88B15 /* UIImage+Merge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2417A7F61D1935B600F88B15 /* UIImage+Merge.m */; };
-		2417A86D1D1935B600F88B15 /* UILabel+SuggestSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 2417A8001D1935B600F88B15 /* UILabel+SuggestSize.m */; };
 		2417A86F1D1935B600F88B15 /* UINavigationController+StackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2417A8051D1935B600F88B15 /* UINavigationController+StackManager.m */; };
 		2417A8701D1935B600F88B15 /* UIResponder+Chain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2417A8081D1935B600F88B15 /* UIResponder+Chain.m */; };
 		2417A8741D1935B600F88B15 /* UIScrollView+Direction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2417A8121D1935B600F88B15 /* UIScrollView+Direction.m */; };
@@ -60,6 +59,8 @@
 		247542A71D19202D0081B821 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247542A51D19202D0081B821 /* LaunchScreen.storyboard */; };
 		247542B21D19202D0081B821 /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 247542B11D19202D0081B821 /* DemoTests.m */; };
 		247542BD1D19202D0081B821 /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 247542BC1D19202D0081B821 /* DemoUITests.m */; };
+		249001371D1BC42600D38F96 /* UILabel+SuggestSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 249001361D1BC42600D38F96 /* UILabel+SuggestSize.m */; };
+		2490013B1D1BC48200D38F96 /* UIFont+PrintAllFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2490013A1D1BC48200D38F96 /* UIFont+PrintAllFonts.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,8 +129,6 @@
 		2417A7F21D1935B600F88B15 /* UIImage+ColorCreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorCreate.m"; sourceTree = "<group>"; };
 		2417A7F51D1935B600F88B15 /* UIImage+Merge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Merge.h"; sourceTree = "<group>"; };
 		2417A7F61D1935B600F88B15 /* UIImage+Merge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Merge.m"; sourceTree = "<group>"; };
-		2417A7FF1D1935B600F88B15 /* UILabel+SuggestSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SuggestSize.h"; sourceTree = "<group>"; };
-		2417A8001D1935B600F88B15 /* UILabel+SuggestSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SuggestSize.m"; sourceTree = "<group>"; };
 		2417A8041D1935B600F88B15 /* UINavigationController+StackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+StackManager.h"; sourceTree = "<group>"; };
 		2417A8051D1935B600F88B15 /* UINavigationController+StackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+StackManager.m"; sourceTree = "<group>"; };
 		2417A8071D1935B600F88B15 /* UIResponder+Chain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Chain.h"; sourceTree = "<group>"; };
@@ -189,6 +188,10 @@
 		247542B81D19202D0081B821 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		247542BC1D19202D0081B821 /* DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoUITests.m; sourceTree = "<group>"; };
 		247542BE1D19202D0081B821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		249001351D1BC42600D38F96 /* UILabel+SuggestSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SuggestSize.h"; sourceTree = "<group>"; };
+		249001361D1BC42600D38F96 /* UILabel+SuggestSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SuggestSize.m"; sourceTree = "<group>"; };
+		249001391D1BC48200D38F96 /* UIFont+PrintAllFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+PrintAllFonts.h"; sourceTree = "<group>"; };
+		2490013A1D1BC48200D38F96 /* UIFont+PrintAllFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+PrintAllFonts.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,8 +344,9 @@
 				2417A8981D193E3600F88B15 /* SZUIKit.h */,
 				2417A7DC1D1935B600F88B15 /* UIButton */,
 				2417A7DF1D1935B600F88B15 /* UIColor */,
+				249001381D1BC46000D38F96 /* UIFont */,
 				2417A7E81D1935B600F88B15 /* UIImage */,
-				2417A7FE1D1935B600F88B15 /* UILable */,
+				249001341D1BC42600D38F96 /* UILabel */,
 				2417A8011D1935B600F88B15 /* UINavigationController */,
 				2417A8061D1935B600F88B15 /* UIResponder */,
 				2417A80E1D1935B600F88B15 /* UIScrollView */,
@@ -387,15 +391,6 @@
 				2417A7F61D1935B600F88B15 /* UIImage+Merge.m */,
 			);
 			path = UIImage;
-			sourceTree = "<group>";
-		};
-		2417A7FE1D1935B600F88B15 /* UILable */ = {
-			isa = PBXGroup;
-			children = (
-				2417A7FF1D1935B600F88B15 /* UILabel+SuggestSize.h */,
-				2417A8001D1935B600F88B15 /* UILabel+SuggestSize.m */,
-			);
-			path = UILable;
 			sourceTree = "<group>";
 		};
 		2417A8011D1935B600F88B15 /* UINavigationController */ = {
@@ -564,6 +559,24 @@
 			path = DemoUITests;
 			sourceTree = "<group>";
 		};
+		249001341D1BC42600D38F96 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				249001351D1BC42600D38F96 /* UILabel+SuggestSize.h */,
+				249001361D1BC42600D38F96 /* UILabel+SuggestSize.m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		249001381D1BC46000D38F96 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				249001391D1BC48200D38F96 /* UIFont+PrintAllFonts.h */,
+				2490013A1D1BC48200D38F96 /* UIFont+PrintAllFonts.m */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -699,7 +712,9 @@
 				2417A85E1D1935B600F88B15 /* UIButton+BackgroundColor.m in Sources */,
 				2417A88C1D1935B600F88B15 /* UIViewController+Visible.m in Sources */,
 				2417A8541D1935B600F88B15 /* NSString+Base64.m in Sources */,
+				2490013B1D1BC48200D38F96 /* UIFont+PrintAllFonts.m in Sources */,
 				2417A8571D1935B600F88B15 /* NSString+Hash.m in Sources */,
+				249001371D1BC42600D38F96 /* UILabel+SuggestSize.m in Sources */,
 				2417A8621D1935B600F88B15 /* UIColor+Random.m in Sources */,
 				2417A8691D1935B600F88B15 /* UIImage+Merge.m in Sources */,
 				2475429F1D19202D0081B821 /* ViewController.m in Sources */,
@@ -738,7 +753,6 @@
 				2417A85F1D1935B600F88B15 /* UIColor+Gradient.m in Sources */,
 				2417A8551D1935B600F88B15 /* NSString+Digital.m in Sources */,
 				2417A8771D1935B600F88B15 /* UITableViewCell+FindTableView.m in Sources */,
-				2417A86D1D1935B600F88B15 /* UILabel+SuggestSize.m in Sources */,
 				2417A84B1D1935B600F88B15 /* NSArray+SafeAccess.m in Sources */,
 				2417A8531D1935B600F88B15 /* NSObject+Property.m in Sources */,
 				2417A84F1D1935B600F88B15 /* NSDictionary+SafeAccess.m in Sources */,
