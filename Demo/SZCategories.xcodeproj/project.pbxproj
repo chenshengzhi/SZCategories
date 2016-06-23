@@ -172,7 +172,7 @@
 		2417A8971D193DCB00F88B15 /* SZFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZFoundation.h; sourceTree = "<group>"; };
 		2417A8981D193E3600F88B15 /* SZUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZUIKit.h; sourceTree = "<group>"; };
 		2417A8991D193E7F00F88B15 /* SZCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZCategories.h; sourceTree = "<group>"; };
-		247542941D19202C0081B821 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		247542941D19202C0081B821 /* SZCategories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SZCategories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		247542981D19202C0081B821 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2475429A1D19202C0081B821 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2475429B1D19202D0081B821 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -182,10 +182,10 @@
 		247542A31D19202D0081B821 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		247542A61D19202D0081B821 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		247542A81D19202D0081B821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		247542AD1D19202D0081B821 /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		247542AD1D19202D0081B821 /* SZCategories.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SZCategories.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		247542B11D19202D0081B821 /* DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTests.m; sourceTree = "<group>"; };
 		247542B31D19202D0081B821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		247542B81D19202D0081B821 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		247542B81D19202D0081B821 /* SZCategories.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SZCategories.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		247542BC1D19202D0081B821 /* DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoUITests.m; sourceTree = "<group>"; };
 		247542BE1D19202D0081B821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		249001351D1BC42600D38F96 /* UILabel+SuggestSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SuggestSize.h"; sourceTree = "<group>"; };
@@ -510,9 +510,9 @@
 		247542951D19202C0081B821 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				247542941D19202C0081B821 /* Demo.app */,
-				247542AD1D19202D0081B821 /* DemoTests.xctest */,
-				247542B81D19202D0081B821 /* DemoUITests.xctest */,
+				247542941D19202C0081B821 /* SZCategories.app */,
+				247542AD1D19202D0081B821 /* SZCategories.xctest */,
+				247542B81D19202D0081B821 /* SZCategories.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -580,9 +580,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		247542931D19202C0081B821 /* Demo */ = {
+		247542931D19202C0081B821 /* SZCategories */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 247542C11D19202D0081B821 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildConfigurationList = 247542C11D19202D0081B821 /* Build configuration list for PBXNativeTarget "SZCategories" */;
 			buildPhases = (
 				247542901D19202C0081B821 /* Sources */,
 				247542911D19202C0081B821 /* Frameworks */,
@@ -592,14 +592,14 @@
 			);
 			dependencies = (
 			);
-			name = Demo;
+			name = SZCategories;
 			productName = Demo;
-			productReference = 247542941D19202C0081B821 /* Demo.app */;
+			productReference = 247542941D19202C0081B821 /* SZCategories.app */;
 			productType = "com.apple.product-type.application";
 		};
-		247542AC1D19202D0081B821 /* DemoTests */ = {
+		247542AC1D19202D0081B821 /* SZCategoriesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 247542C41D19202D0081B821 /* Build configuration list for PBXNativeTarget "DemoTests" */;
+			buildConfigurationList = 247542C41D19202D0081B821 /* Build configuration list for PBXNativeTarget "SZCategoriesTests" */;
 			buildPhases = (
 				247542A91D19202D0081B821 /* Sources */,
 				247542AA1D19202D0081B821 /* Frameworks */,
@@ -610,14 +610,14 @@
 			dependencies = (
 				247542AF1D19202D0081B821 /* PBXTargetDependency */,
 			);
-			name = DemoTests;
+			name = SZCategoriesTests;
 			productName = DemoTests;
-			productReference = 247542AD1D19202D0081B821 /* DemoTests.xctest */;
+			productReference = 247542AD1D19202D0081B821 /* SZCategories.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		247542B71D19202D0081B821 /* DemoUITests */ = {
+		247542B71D19202D0081B821 /* SZCategoriesUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 247542C71D19202D0081B821 /* Build configuration list for PBXNativeTarget "DemoUITests" */;
+			buildConfigurationList = 247542C71D19202D0081B821 /* Build configuration list for PBXNativeTarget "SZCategoriesUITests" */;
 			buildPhases = (
 				247542B41D19202D0081B821 /* Sources */,
 				247542B51D19202D0081B821 /* Frameworks */,
@@ -628,9 +628,9 @@
 			dependencies = (
 				247542BA1D19202D0081B821 /* PBXTargetDependency */,
 			);
-			name = DemoUITests;
+			name = SZCategoriesUITests;
 			productName = DemoUITests;
-			productReference = 247542B81D19202D0081B821 /* DemoUITests.xctest */;
+			productReference = 247542B81D19202D0081B821 /* SZCategories.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -655,7 +655,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2475428F1D19202C0081B821 /* Build configuration list for PBXProject "Demo" */;
+			buildConfigurationList = 2475428F1D19202C0081B821 /* Build configuration list for PBXProject "SZCategories" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -668,9 +668,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				247542931D19202C0081B821 /* Demo */,
-				247542AC1D19202D0081B821 /* DemoTests */,
-				247542B71D19202D0081B821 /* DemoUITests */,
+				247542931D19202C0081B821 /* SZCategories */,
+				247542AC1D19202D0081B821 /* SZCategoriesTests */,
+				247542B71D19202D0081B821 /* SZCategoriesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -780,12 +780,12 @@
 /* Begin PBXTargetDependency section */
 		247542AF1D19202D0081B821 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 247542931D19202C0081B821 /* Demo */;
+			target = 247542931D19202C0081B821 /* SZCategories */;
 			targetProxy = 247542AE1D19202D0081B821 /* PBXContainerItemProxy */;
 		};
 		247542BA1D19202D0081B821 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 247542931D19202C0081B821 /* Demo */;
+			target = 247542931D19202C0081B821 /* SZCategories */;
 			targetProxy = 247542B91D19202D0081B821 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -899,7 +899,7 @@
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = csz.Demo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SZCategories;
 			};
 			name = Debug;
 		};
@@ -910,7 +910,7 @@
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = csz.Demo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SZCategories;
 			};
 			name = Release;
 		};
@@ -921,8 +921,8 @@
 				INFOPLIST_FILE = DemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = csz.DemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
+				PRODUCT_NAME = SZCategories;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SZCategories.app/SZCategories";
 			};
 			name = Debug;
 		};
@@ -933,8 +933,8 @@
 				INFOPLIST_FILE = DemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = csz.DemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
+				PRODUCT_NAME = SZCategories;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SZCategories.app/SZCategories";
 			};
 			name = Release;
 		};
@@ -944,7 +944,7 @@
 				INFOPLIST_FILE = DemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = csz.DemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SZCategories;
 				TEST_TARGET_NAME = Demo;
 			};
 			name = Debug;
@@ -955,7 +955,7 @@
 				INFOPLIST_FILE = DemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = csz.DemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SZCategories;
 				TEST_TARGET_NAME = Demo;
 			};
 			name = Release;
@@ -963,7 +963,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2475428F1D19202C0081B821 /* Build configuration list for PBXProject "Demo" */ = {
+		2475428F1D19202C0081B821 /* Build configuration list for PBXProject "SZCategories" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				247542BF1D19202D0081B821 /* Debug */,
@@ -972,7 +972,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		247542C11D19202D0081B821 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+		247542C11D19202D0081B821 /* Build configuration list for PBXNativeTarget "SZCategories" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				247542C21D19202D0081B821 /* Debug */,
@@ -981,7 +981,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		247542C41D19202D0081B821 /* Build configuration list for PBXNativeTarget "DemoTests" */ = {
+		247542C41D19202D0081B821 /* Build configuration list for PBXNativeTarget "SZCategoriesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				247542C51D19202D0081B821 /* Debug */,
@@ -990,7 +990,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		247542C71D19202D0081B821 /* Build configuration list for PBXNativeTarget "DemoUITests" */ = {
+		247542C71D19202D0081B821 /* Build configuration list for PBXNativeTarget "SZCategoriesUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				247542C81D19202D0081B821 /* Debug */,
