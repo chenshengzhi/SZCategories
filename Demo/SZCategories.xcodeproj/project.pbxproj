@@ -51,6 +51,7 @@
 		2417A88D1D1935B600F88B15 /* UIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2417A84A1D1935B600F88B15 /* UIWindow+Hierarchy.m */; };
 		2417A8931D1937D800F88B15 /* UIView+captureImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2417A8921D1937D800F88B15 /* UIView+captureImage.m */; };
 		2417A8961D193A0500F88B15 /* UIView+SZFrameHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2417A8951D193A0500F88B15 /* UIView+SZFrameHelper.m */; };
+		242772BC1D23BA0A0025D223 /* UIViewController+Storyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 242772BB1D23BA0A0025D223 /* UIViewController+Storyboard.m */; };
 		247542991D19202C0081B821 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 247542981D19202C0081B821 /* main.m */; };
 		2475429C1D19202D0081B821 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2475429B1D19202D0081B821 /* AppDelegate.m */; };
 		2475429F1D19202D0081B821 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2475429E1D19202D0081B821 /* ViewController.m */; };
@@ -172,6 +173,8 @@
 		2417A8971D193DCB00F88B15 /* SZFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZFoundation.h; sourceTree = "<group>"; };
 		2417A8981D193E3600F88B15 /* SZUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZUIKit.h; sourceTree = "<group>"; };
 		2417A8991D193E7F00F88B15 /* SZCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZCategories.h; sourceTree = "<group>"; };
+		242772BA1D23BA0A0025D223 /* UIViewController+Storyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Storyboard.h"; sourceTree = "<group>"; };
+		242772BB1D23BA0A0025D223 /* UIViewController+Storyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Storyboard.m"; sourceTree = "<group>"; };
 		247542941D19202C0081B821 /* SZCategories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SZCategories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		247542981D19202C0081B821 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2475429A1D19202C0081B821 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -479,6 +482,8 @@
 			children = (
 				2417A8401D1935B600F88B15 /* UIViewController+AlertSheet.h */,
 				2417A8411D1935B600F88B15 /* UIViewController+AlertSheet.m */,
+				242772BA1D23BA0A0025D223 /* UIViewController+Storyboard.h */,
+				242772BB1D23BA0A0025D223 /* UIViewController+Storyboard.m */,
 				2417A8441D1935B600F88B15 /* UIViewController+TakeOrPickPhoto.h */,
 				2417A8451D1935B600F88B15 /* UIViewController+TakeOrPickPhoto.m */,
 				2417A8461D1935B600F88B15 /* UIViewController+Visible.h */,
@@ -748,6 +753,7 @@
 				2417A85C1D1935B600F88B15 /* NSString+UrlEncode.m in Sources */,
 				2417A8931D1937D800F88B15 /* UIView+captureImage.m in Sources */,
 				2417A84E1D1935B600F88B15 /* NSDate+Helper.m in Sources */,
+				242772BC1D23BA0A0025D223 /* UIViewController+Storyboard.m in Sources */,
 				2417A88D1D1935B600F88B15 /* UIWindow+Hierarchy.m in Sources */,
 				2417A8521D1935B600F88B15 /* NSObject+AssociatedObject.m in Sources */,
 				2417A85F1D1935B600F88B15 /* UIColor+Gradient.m in Sources */,

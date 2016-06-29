@@ -22,19 +22,19 @@
     return [UINib nibWithNibName:nibName bundle:bundle];
 }
 
-+ (instancetype)loadInstanceFromNib {
-    return [self loadInstanceFromNibWithName:NSStringFromClass([self class])];
++ (instancetype)loadFromNib {
+    return [self loadFromNibWithName:NSStringFromClass([self class])];
 }
 
-+ (instancetype)loadInstanceFromNibWithName:(NSString *)nibName {
-    return [self loadInstanceFromNibWithName:nibName owner:nil];
++ (instancetype)loadFromNibWithName:(NSString *)nibName {
+    return [self loadFromNibWithName:nibName owner:nil];
 }
 
-+ (instancetype)loadInstanceFromNibWithName:(NSString *)nibName owner:(id)owner {
-    return [self loadInstanceFromNibWithName:nibName owner:owner bundle:[NSBundle mainBundle]];
++ (instancetype)loadFromNibWithName:(NSString *)nibName owner:(id)owner {
+    return [self loadFromNibWithName:nibName owner:owner bundle:[NSBundle mainBundle]];
 }
 
-+ (instancetype)loadInstanceFromNibWithName:(NSString *)nibName owner:(id)owner bundle:(NSBundle *)bundle {
++ (instancetype)loadFromNibWithName:(NSString *)nibName owner:(id)owner bundle:(NSBundle *)bundle {
     UIView *result = nil;
     NSArray* elements = [bundle loadNibNamed:nibName owner:owner options:nil];
     for (id object in elements) {

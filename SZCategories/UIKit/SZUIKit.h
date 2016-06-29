@@ -30,6 +30,7 @@
 #import "UIView+ViewController.h"
 #import "UIView+Visuals.h"
 #import "UIViewController+AlertSheet.h"
+#import "UIViewController+Storyboard.h"
 #import "UIViewController+TakeOrPickPhoto.h"
 #import "UIViewController+Visible.h"
 #import "UIWindow+Hierarchy.h"
