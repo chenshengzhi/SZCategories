@@ -27,3 +27,16 @@
 }
 
 @end
+
+
+@implementation UIImage (Resize)
+
+- (UIImage *)imageWithSize:(CGSize)size {
+    UIGraphicsBeginImageContextWithOptions(size, NO, self.scale);
+    [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+@end

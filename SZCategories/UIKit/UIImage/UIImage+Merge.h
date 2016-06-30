@@ -13,3 +13,10 @@
 + (UIImage *)mergeImage:(UIImage *)firstImage withImage:(UIImage *)secondImage;
 
 @end
+
+
+@interface UIImage (Resize)
+
+- (UIImage *)imageWithSize:(CGSize)size;
+
+@end
