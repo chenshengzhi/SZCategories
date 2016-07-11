@@ -40,3 +40,21 @@
 }
 
 @end
+
+
+
+@implementation UIImage (TintColor)
+
+- (UIImage *)imageWithTintColor:(UIColor *)tintColor {
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, 0);
+    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
+    [self drawInRect:rect];
+    [tintColor set];
+    UIRectFillUsingBlendMode(rect, kCGBlendModeColor);
+    [self drawInRect:rect blendMode:kCGBlendModeDestinationIn alpha:1];
+    UIImage *tintImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return tintImage;
+}
+
+@end

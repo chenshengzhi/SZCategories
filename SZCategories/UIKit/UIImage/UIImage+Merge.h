@@ -20,3 +20,11 @@
 - (UIImage *)imageWithSize:(CGSize)size;
 
 @end
+
+
+
+@interface UIImage (TintColor)
+
+- (UIImage *)imageWithTintColor:(UIColor *)tintColor;
+
+@end
