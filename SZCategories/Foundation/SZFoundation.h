@@ -24,3 +24,4 @@
 #import "NSString+Trims.h"
 #import "NSString+UrlEncode.h"
 #import "NSString+Util.h"
+#import "NSString+HTMLText.h"

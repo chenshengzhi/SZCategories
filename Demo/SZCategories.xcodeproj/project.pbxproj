@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2413A4EE1D409CF00054B052 /* NSString+HTMLText.m in Sources */ = {isa = PBXBuildFile; fileRef = 2413A4ED1D409CF00054B052 /* NSString+HTMLText.m */; };
 		2417A84B1D1935B600F88B15 /* NSArray+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 2417A7AF1D1935B500F88B15 /* NSArray+SafeAccess.m */; };
 		2417A84C1D1935B600F88B15 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 2417A7B21D1935B500F88B15 /* NSData+Base64.m */; };
 		2417A84D1D1935B600F88B15 /* NSData+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 2417A7B41D1935B500F88B15 /* NSData+Hash.m */; };
@@ -82,6 +83,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2413A4EC1D409CF00054B052 /* NSString+HTMLText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTMLText.h"; sourceTree = "<group>"; };
+		2413A4ED1D409CF00054B052 /* NSString+HTMLText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTMLText.m"; sourceTree = "<group>"; };
 		2417A7AE1D1935B500F88B15 /* NSArray+SafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SafeAccess.h"; sourceTree = "<group>"; };
 		2417A7AF1D1935B500F88B15 /* NSArray+SafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeAccess.m"; sourceTree = "<group>"; };
 		2417A7B11D1935B500F88B15 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
@@ -337,6 +340,8 @@
 				2417A7D81D1935B600F88B15 /* NSString+UrlEncode.m */,
 				2417A7D91D1935B600F88B15 /* NSString+Util.h */,
 				2417A7DA1D1935B600F88B15 /* NSString+Util.m */,
+				2413A4EC1D409CF00054B052 /* NSString+HTMLText.h */,
+				2413A4ED1D409CF00054B052 /* NSString+HTMLText.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -750,6 +755,7 @@
 				2417A85B1D1935B600F88B15 /* NSString+Trims.m in Sources */,
 				2417A8891D1935B600F88B15 /* UIViewController+AlertSheet.m in Sources */,
 				2417A86F1D1935B600F88B15 /* UINavigationController+StackManager.m in Sources */,
+				2413A4EE1D409CF00054B052 /* NSString+HTMLText.m in Sources */,
 				2417A85C1D1935B600F88B15 /* NSString+UrlEncode.m in Sources */,
 				2417A8931D1937D800F88B15 /* UIView+captureImage.m in Sources */,
 				2417A84E1D1935B600F88B15 /* NSDate+Helper.m in Sources */,
