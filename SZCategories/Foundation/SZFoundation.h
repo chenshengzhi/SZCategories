@@ -15,6 +15,7 @@
 #import "NSNumber+Round.h"
 #import "NSObject+AssociatedObject.h"
 #import "NSObject+Property.h"
+#import "NSObject+TimeProfile.h"
 #import "NSString+Base64.h"
 #import "NSString+Digital.h"
 #import "NSString+Hash.h"
