@@ -64,6 +64,7 @@
 		247542BD1D19202D0081B821 /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 247542BC1D19202D0081B821 /* DemoUITests.m */; };
 		249001371D1BC42600D38F96 /* UILabel+SuggestSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 249001361D1BC42600D38F96 /* UILabel+SuggestSize.m */; };
 		2490013B1D1BC48200D38F96 /* UIFont+PrintAllFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2490013A1D1BC48200D38F96 /* UIFont+PrintAllFonts.m */; };
+		24C2FB7D1D41F25C001CA8A7 /* NSBundle+SZAppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C2FB7C1D41F25C001CA8A7 /* NSBundle+SZAppVersion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +202,8 @@
 		249001361D1BC42600D38F96 /* UILabel+SuggestSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SuggestSize.m"; sourceTree = "<group>"; };
 		249001391D1BC48200D38F96 /* UIFont+PrintAllFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+PrintAllFonts.h"; sourceTree = "<group>"; };
 		2490013A1D1BC48200D38F96 /* UIFont+PrintAllFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+PrintAllFonts.m"; sourceTree = "<group>"; };
+		24C2FB7B1D41F25C001CA8A7 /* NSBundle+SZAppVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SZAppVersion.h"; sourceTree = "<group>"; };
+		24C2FB7C1D41F25C001CA8A7 /* NSBundle+SZAppVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SZAppVersion.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +247,7 @@
 			children = (
 				2417A8971D193DCB00F88B15 /* SZFoundation.h */,
 				2417A7AD1D1935B500F88B15 /* NSArray */,
+				24C2FB7A1D41F248001CA8A7 /* NSBundle */,
 				2417A7B01D1935B500F88B15 /* NSData */,
 				2417A7B51D1935B500F88B15 /* NSDate */,
 				2417A7B81D1935B500F88B15 /* NSDictionary */,
@@ -592,6 +596,15 @@
 			path = UIFont;
 			sourceTree = "<group>";
 		};
+		24C2FB7A1D41F248001CA8A7 /* NSBundle */ = {
+			isa = PBXGroup;
+			children = (
+				24C2FB7B1D41F25C001CA8A7 /* NSBundle+SZAppVersion.h */,
+				24C2FB7C1D41F25C001CA8A7 /* NSBundle+SZAppVersion.m */,
+			);
+			path = NSBundle;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -754,6 +767,7 @@
 				247542991D19202C0081B821 /* main.m in Sources */,
 				2417A8741D1935B600F88B15 /* UIScrollView+Direction.m in Sources */,
 				2417A87B1D1935B600F88B15 /* UITextView+Select.m in Sources */,
+				24C2FB7D1D41F25C001CA8A7 /* NSBundle+SZAppVersion.m in Sources */,
 				2417A84D1D1935B600F88B15 /* NSData+Hash.m in Sources */,
 				2417A8831D1935B600F88B15 /* UIView+RecursiveDescription.m in Sources */,
 				2417A8501D1935B600F88B15 /* NSFileManager+Paths.m in Sources */,

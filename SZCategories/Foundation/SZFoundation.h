@@ -7,6 +7,7 @@
 //
 
 #import "NSArray+SafeAccess.h"
+#import "NSBundle+SZAppVersion.h"
 #import "NSData+Base64.h"
 #import "NSData+Hash.h"
 #import "NSDate+Helper.h"

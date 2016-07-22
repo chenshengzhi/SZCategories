@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
     s.name         = "SZCategories"
-    s.version      = "0.0.8"
+    s.version      = "0.0.9"
     s.summary      = "some useful categories"
     s.homepage     = "https://github.com/chenshengzhi/SZCategories"
     s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -19,6 +19,11 @@ Pod::Spec.new do |s|
 
         ss.subspec 'NSArray' do |sss|
             sss.source_files = 'SZCategories/Foundation/NSArray/*.{h,m}'
+            sss.frameworks   = 'Foundation'
+        end
+
+        ss.subspec 'NSBundle' do |sss|
+            sss.source_files = 'SZCategories/Foundation/NSBundle/*.{h,m}'
             sss.frameworks   = 'Foundation'
         end
 
