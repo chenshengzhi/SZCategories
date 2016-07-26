@@ -25,7 +25,7 @@
     redView.center = self.view.center;
     [self.view addSubview:redView];
 
-    [redView rotateByAngle:360 duration:1 autoreverse:NO repeatCount:CGFLOAT_MAX timingFunction:nil];
+    [redView sz_rotateByAngle:360 duration:1 autoreverse:NO repeatCount:CGFLOAT_MAX timingFunction:nil];
 }
 
 - (void)didReceiveMemoryWarning {
