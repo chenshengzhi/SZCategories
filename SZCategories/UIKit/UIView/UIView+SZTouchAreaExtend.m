@@ -33,8 +33,9 @@ static char UIViewTouchAreaExtendKey;
         bounds.size.height += 2 * length;
         if (CGRectContainsPoint(bounds, point)) {
             return self;
+        } else {
+            return [self sz_extend_HitTest:point withEvent:event];
         }
-        return nil;
     } else {
         return [self sz_extend_HitTest:point withEvent:event];
     }
