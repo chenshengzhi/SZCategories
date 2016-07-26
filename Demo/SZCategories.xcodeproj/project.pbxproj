@@ -58,6 +58,7 @@
 		245652BB1D4733CF00DBCB4F /* UIViewController+SZTakeOrPickPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 245652851D4733CF00DBCB4F /* UIViewController+SZTakeOrPickPhoto.m */; };
 		245652BC1D4733CF00DBCB4F /* UIViewController+SZVisible.m in Sources */ = {isa = PBXBuildFile; fileRef = 245652871D4733CF00DBCB4F /* UIViewController+SZVisible.m */; };
 		245652BD1D4733CF00DBCB4F /* UIWindow+SZHierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2456528A1D4733CF00DBCB4F /* UIWindow+SZHierarchy.m */; };
+		245652C01D473BDE00DBCB4F /* NSString+SZFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 245652BF1D473BDE00DBCB4F /* NSString+SZFilePath.m */; };
 		247542991D19202C0081B821 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 247542981D19202C0081B821 /* main.m */; };
 		2475429C1D19202D0081B821 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2475429B1D19202D0081B821 /* AppDelegate.m */; };
 		2475429F1D19202D0081B821 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2475429E1D19202D0081B821 /* ViewController.m */; };
@@ -191,6 +192,8 @@
 		245652871D4733CF00DBCB4F /* UIViewController+SZVisible.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SZVisible.m"; sourceTree = "<group>"; };
 		245652891D4733CF00DBCB4F /* UIWindow+SZHierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+SZHierarchy.h"; sourceTree = "<group>"; };
 		2456528A1D4733CF00DBCB4F /* UIWindow+SZHierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+SZHierarchy.m"; sourceTree = "<group>"; };
+		245652BE1D473BDE00DBCB4F /* NSString+SZFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SZFilePath.h"; sourceTree = "<group>"; };
+		245652BF1D473BDE00DBCB4F /* NSString+SZFilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SZFilePath.m"; sourceTree = "<group>"; };
 		247542941D19202C0081B821 /* SZCategories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SZCategories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		247542981D19202C0081B821 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2475429A1D19202C0081B821 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -363,6 +366,8 @@
 				2456523A1D4733CF00DBCB4F /* NSString+SZUrlEncode.m */,
 				2456523B1D4733CF00DBCB4F /* NSString+SZUtil.h */,
 				2456523C1D4733CF00DBCB4F /* NSString+SZUtil.m */,
+				245652BE1D473BDE00DBCB4F /* NSString+SZFilePath.h */,
+				245652BF1D473BDE00DBCB4F /* NSString+SZFilePath.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -779,6 +784,7 @@
 				245652A71D4733CF00DBCB4F /* UIImage+SZMerge.m in Sources */,
 				245652A81D4733CF00DBCB4F /* UILabel+SZSuggestSize.m in Sources */,
 				2456529F1D4733CF00DBCB4F /* NSString+SZUtil.m in Sources */,
+				245652C01D473BDE00DBCB4F /* NSString+SZFilePath.m in Sources */,
 				245652A31D4733CF00DBCB4F /* UIColor+SZHEX.m in Sources */,
 				245652971D4733CF00DBCB4F /* NSString+SZDigital.m in Sources */,
 				2456529A1D4733CF00DBCB4F /* NSString+SZMD5.m in Sources */,
