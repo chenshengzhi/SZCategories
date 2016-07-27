@@ -20,9 +20,13 @@
 
 - (void)timerFiredHandler:(NSTimer *)timer {
     if (_seconds > 0 && _button) {
-        NSString *title = [NSString stringWithFormat:_disabledTitleFormart, _seconds];
-        [_button setTitle:title forState:UIControlStateDisabled];
-        _seconds--;
+        if ((_button.state & UIControlStateDisabled) > 0) {
+            NSString *title = [NSString stringWithFormat:_disabledTitleFormart, _seconds];
+            [_button setTitle:title forState:UIControlStateDisabled];
+            _seconds--;
+        } else {
+            [timer invalidate];
+        }
     } else {
         [timer invalidate];
 
