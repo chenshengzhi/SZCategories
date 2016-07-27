@@ -11,7 +11,7 @@
 
 @implementation UIScrollView (SZHasButton)
 
-+ (void)sz_load {
++ (void)load {
     Method origin = class_getInstanceMethod([UIScrollView class], @selector(gestureRecognizer:shouldReceiveTouch:));
     if (origin != NULL) {
         Method now = class_getInstanceMethod([UIScrollView class], @selector(sz_gestureRecognizer:shouldReceiveTouch:));
