@@ -20,8 +20,8 @@ typedef void(^PAImagePickerSuccessBlock)(NSDictionary *info, UIImage *image);
  *  @param successBlock  回调
  */
 - (void)sz_pickAnPhotoWithAllowEditing:(BOOL)allowsEditing
-                         sourceView:(UIView *)sourceView
-                            success:(PAImagePickerSuccessBlock)successBlock;
+                            sourceView:(UIView *)sourceView
+                               success:(PAImagePickerSuccessBlock)successBlock;
 
 /**
  *  拍照
@@ -31,7 +31,7 @@ typedef void(^PAImagePickerSuccessBlock)(NSDictionary *info, UIImage *image);
  *  @param successBlock  回调
  */
 - (void)sz_takeAnPhotoWithAllowEditing:(BOOL)allowsEditing
-                         sourceView:(UIView *)sourceView
-                            success:(PAImagePickerSuccessBlock)successBlock;
+                            sourceView:(UIView *)sourceView
+                               success:(PAImagePickerSuccessBlock)successBlock;
 
 @end

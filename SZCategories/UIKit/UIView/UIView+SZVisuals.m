@@ -22,22 +22,22 @@
 
 - (void)sz_setRoundedCorners:(UIRectCorner)corners radius:(CGFloat)radius {
     CGRect rect = self.bounds;
-    
+
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:rect
                                                    byRoundingCorners:corners
                                                          cornerRadii:CGSizeMake(radius, radius)];
-    
+
     CAShapeLayer *maskLayer = [CAShapeLayer layer];
     maskLayer.frame = rect;
     maskLayer.path = maskPath.CGPath;
-    
+
     self.layer.mask = maskLayer;
 }
 
-- (void)sz_shadowWithColor:(UIColor *)color 
-                offset:(CGSize)offset 
-               opacity:(CGFloat)opacity 
-                radius:(CGFloat)radius {
+- (void)sz_shadowWithColor:(UIColor *)color
+                    offset:(CGSize)offset
+                   opacity:(CGFloat)opacity
+                    radius:(CGFloat)radius {
     self.clipsToBounds = NO;
     self.layer.shadowColor = color.CGColor;
     self.layer.shadowOffset = offset;
@@ -47,59 +47,59 @@
 
 - (void)sz_removeFromSuperviewWithFadeDuration:(NSTimeInterval)duration {
     [UIView beginAnimations:nil context:NULL];
-	[UIView setAnimationBeginsFromCurrentState:YES];
-	[UIView setAnimationDuration:duration];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:duration];
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDidStopSelector:@selector(removeFromSuperview)];
     self.alpha = 0.0;
-	[UIView commitAnimations];	
+    [UIView commitAnimations];
 }
 
 - (void)sz_addSubview:(UIView *)subview withTransition:(UIViewAnimationTransition)transition duration:(NSTimeInterval)duration {
-	[UIView beginAnimations:nil context:NULL];
-	[UIView setAnimationDuration:duration];
-	[UIView setAnimationTransition:transition forView:self cache:YES];
-	[self addSubview:subview];
-	[UIView commitAnimations];
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:duration];
+    [UIView setAnimationTransition:transition forView:self cache:YES];
+    [self addSubview:subview];
+    [UIView commitAnimations];
 }
 
 - (void)sz_removeFromSuperviewWithTransition:(UIViewAnimationTransition)transition duration:(NSTimeInterval)duration {
-	[UIView beginAnimations:nil context:NULL];
-	[UIView setAnimationDuration:duration];
-	[UIView setAnimationTransition:transition forView:self.superview cache:YES];
-	[self removeFromSuperview];
-	[UIView commitAnimations];
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:duration];
+    [UIView setAnimationTransition:transition forView:self.superview cache:YES];
+    [self removeFromSuperview];
+    [UIView commitAnimations];
 }
 
-- (void)sz_rotateByAngle:(CGFloat)angle 
-            duration:(NSTimeInterval)duration 
-         autoreverse:(BOOL)autoreverse
-         repeatCount:(CGFloat)repeatCount
-      timingFunction:(CAMediaTimingFunction *)timingFunction {
+- (void)sz_rotateByAngle:(CGFloat)angle
+                duration:(NSTimeInterval)duration
+             autoreverse:(BOOL)autoreverse
+             repeatCount:(CGFloat)repeatCount
+          timingFunction:(CAMediaTimingFunction *)timingFunction {
     CABasicAnimation *rotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     rotation.toValue = [NSNumber numberWithFloat:degToRad(angle)];
     rotation.duration = duration;
     rotation.repeatCount = repeatCount;
     rotation.autoreverses = autoreverse;
     rotation.removedOnCompletion = NO;
-	rotation.fillMode = kCAFillModeBoth;
-	rotation.timingFunction = timingFunction != nil ? timingFunction :[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    rotation.fillMode = kCAFillModeBoth;
+    rotation.timingFunction = timingFunction != nil ? timingFunction :[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     [self.layer addAnimation:rotation forKey:@"rotationAnimation"];
 }
 
-- (void)sz_moveToPoint:(CGPoint)newPoint 
-          duration:(NSTimeInterval)duration 
-       autoreverse:(BOOL)autoreverse
-       repeatCount:(CGFloat)repeatCount
-    timingFunction:(CAMediaTimingFunction *)timingFunction {
+- (void)sz_moveToPoint:(CGPoint)newPoint
+              duration:(NSTimeInterval)duration
+           autoreverse:(BOOL)autoreverse
+           repeatCount:(CGFloat)repeatCount
+        timingFunction:(CAMediaTimingFunction *)timingFunction {
     CABasicAnimation *move = [CABasicAnimation animationWithKeyPath:@"position"];
     move.toValue = [NSValue valueWithCGPoint:newPoint];
     move.duration = duration;
     move.removedOnCompletion = NO;
     move.repeatCount = repeatCount;
     move.autoreverses = autoreverse;
-	move.fillMode = kCAFillModeBoth;
-	move.timingFunction = timingFunction != nil ? timingFunction :[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    move.fillMode = kCAFillModeBoth;
+    move.timingFunction = timingFunction != nil ? timingFunction :[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     [self.layer addAnimation:move forKey:@"positionAnimation"];
 }
 

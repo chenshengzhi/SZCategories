@@ -21,9 +21,9 @@
  *  @return UIAlertController
  */
 - (UIAlertController *)sz_alertWithTitle:(NSString *)title
-                              message:(NSString *)message
-                     destructiveTitle:(NSString *)destructiveTitle
-                   destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler;
+                                 message:(NSString *)message
+                        destructiveTitle:(NSString *)destructiveTitle
+                      destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler;
 
 /**
  *  确认提示, 有取消按钮 和 确认按钮
@@ -36,9 +36,9 @@
  *  @return UIAlertController
  */
 - (UIAlertController *)sz_confirmTitle:(NSString *)title
-                            message:(NSString *)message
-                   destructiveTitle:(NSString *)destructiveTitle
-                 destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler;
+                               message:(NSString *)message
+                      destructiveTitle:(NSString *)destructiveTitle
+                    destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler;
 
 /**
  *  带输入框的确认提示, 有取消按钮 和 确认按钮
@@ -51,9 +51,9 @@
  *  @return UIAlertController
  */
 - (UIAlertController *)sz_promptWithTitle:(NSString *)title
-                      destructiveTitle:(NSString *)destructiveTitle
-                textFieldConfiguration:(void (^)(UITextField *textField))textFieldConfiguration
-                    destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler;
+                         destructiveTitle:(NSString *)destructiveTitle
+                   textFieldConfiguration:(void (^)(UITextField *textField))textFieldConfiguration
+                       destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler;
 
 /**
  *  操作表
@@ -66,8 +66,8 @@
  *  @return UIAlertController
  */
 - (UIAlertController *)sz_sheetWithTitle:(NSString *)title
-                              message:(NSString *)message
-                              actions:(NSArray *)actions
-                           sourceView:(UIView *)sourceView;
+                                 message:(NSString *)message
+                                 actions:(NSArray *)actions
+                              sourceView:(UIView *)sourceView;
 
 @end

@@ -32,7 +32,7 @@
         return CGSizeZero;
     }
     return [self sz_suggestSizeForAttributedString:[[NSAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: self.font}]
-                                          width:width];
+                                             width:width];
 }
 
 @end

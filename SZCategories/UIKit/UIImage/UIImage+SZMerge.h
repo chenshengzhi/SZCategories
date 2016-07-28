@@ -15,7 +15,7 @@
 @end
 
 
-@interface UIImage (Resize)
+@interface UIImage (SZResize)
 
 - (UIImage *)sz_imageWithSize:(CGSize)size;
 
@@ -23,7 +23,7 @@
 
 
 
-@interface UIImage (TintColor)
+@interface UIImage (SZTintColor)
 
 - (UIImage *)sz_imageWithTintColor:(UIColor *)tintColor;
 

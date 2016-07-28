@@ -9,6 +9,7 @@
 #import "UITextView+SZSelect.h"
 
 @implementation UITextView (SZSelect)
+
 - (NSRange)sz_selectedRange {
     UITextPosition* beginning = self.beginningOfDocument;
     
@@ -21,6 +22,7 @@
     
     return NSMakeRange(location, length);
 }
+
 - (void)sz_selectAllText {
     UITextRange *range = [self textRangeFromPosition:self.beginningOfDocument toPosition:self.endOfDocument];
     [self setSelectedTextRange:range];
@@ -33,4 +35,5 @@
     UITextRange *selectionRange = [self textRangeFromPosition:startPosition toPosition:endPosition];
     [self setSelectedTextRange:selectionRange];
 }
+
 @end

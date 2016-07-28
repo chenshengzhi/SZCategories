@@ -22,17 +22,17 @@
 
 @implementation PAImagePickerDelegate
 
-- (void)sz_imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:nil];
-    
+
     if (_successBlock) {
         _successBlock(nil, nil);
     }
 }
 
-- (void)sz_imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [picker dismissViewControllerAnimated:YES completion:nil];
-    
+
     UIImage *image = nil;
     if (_allowsEditing) {
         image = info[UIImagePickerControllerEditedImage];
@@ -59,12 +59,12 @@ static char PAImagePickerDelegateKey;
  *  @param successBlock  回调
  */
 - (void)sz_pickAnPhotoWithAllowEditing:(BOOL)allowsEditing
-                         sourceView:(UIView *)sourceView
-                            success:(PAImagePickerSuccessBlock)successBlock {
+                            sourceView:(UIView *)sourceView
+                               success:(PAImagePickerSuccessBlock)successBlock {
     PAImagePickerDelegate *delegate = [[PAImagePickerDelegate alloc] init];
     delegate.allowsEditing = allowsEditing;
     delegate.successBlock = successBlock;
-    
+
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     objc_setAssociatedObject(picker, &PAImagePickerDelegateKey, delegate, OBJC_ASSOCIATION_RETAIN);
     picker.delegate = delegate;
@@ -83,8 +83,8 @@ static char PAImagePickerDelegateKey;
  *  @param successBlock  回调
  */
 - (void)sz_takeAnPhotoWithAllowEditing:(BOOL)allowsEditing
-                         sourceView:(UIView *)sourceView
-                            success:(PAImagePickerSuccessBlock)successBlock {
+                            sourceView:(UIView *)sourceView
+                               success:(PAImagePickerSuccessBlock)successBlock {
     AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     if (authStatus == AVAuthorizationStatusDenied || authStatus == AVAuthorizationStatusRestricted) {
         UIAlertController *controller = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"无法使用相机", nil)
@@ -94,11 +94,11 @@ static char PAImagePickerDelegateKey;
         [self presentViewController:controller animated:YES completion:nil];
         return;
     }
-    
+
     PAImagePickerDelegate *delegate = [[PAImagePickerDelegate alloc] init];
     delegate.allowsEditing = allowsEditing;
     delegate.successBlock = successBlock;
-    
+
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     objc_setAssociatedObject(picker, &PAImagePickerDelegateKey, delegate, OBJC_ASSOCIATION_RETAIN);
     picker.delegate = delegate;

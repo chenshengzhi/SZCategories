@@ -11,17 +11,17 @@
 
 @interface UIView (SZVisuals)
 
-- (void)sz_cornerRadius:(CGFloat)radius 
-         strokeSize:(CGFloat)size 
-              color:(UIColor *)color;
+- (void)sz_cornerRadius:(CGFloat)radius
+             strokeSize:(CGFloat)size
+                  color:(UIColor *)color;
 
 - (void)sz_setRoundedCorners:(UIRectCorner)corners
-                  radius:(CGFloat)radius;
+                      radius:(CGFloat)radius;
 
-- (void)sz_shadowWithColor:(UIColor *)color 
-                offset:(CGSize)offset 
-               opacity:(CGFloat)opacity 
-                radius:(CGFloat)radius;
+- (void)sz_shadowWithColor:(UIColor *)color
+                    offset:(CGSize)offset
+                   opacity:(CGFloat)opacity
+                    radius:(CGFloat)radius;
 
 - (void)sz_removeFromSuperviewWithFadeDuration:(NSTimeInterval)duration;
 
@@ -29,16 +29,16 @@
 
 - (void)sz_removeFromSuperviewWithTransition:(UIViewAnimationTransition)transition duration:(NSTimeInterval)duration;
 
-- (void)sz_rotateByAngle:(CGFloat)angle 
-            duration:(NSTimeInterval)duration 
-         autoreverse:(BOOL)autoreverse
-         repeatCount:(CGFloat)repeatCount
-      timingFunction:(CAMediaTimingFunction *)timingFunction;
+- (void)sz_rotateByAngle:(CGFloat)angle
+                duration:(NSTimeInterval)duration
+             autoreverse:(BOOL)autoreverse
+             repeatCount:(CGFloat)repeatCount
+          timingFunction:(CAMediaTimingFunction *)timingFunction;
 
-- (void)sz_moveToPoint:(CGPoint)newPoint 
-          duration:(NSTimeInterval)duration 
-       autoreverse:(BOOL)autoreverse
-       repeatCount:(CGFloat)repeatCount
-    timingFunction:(CAMediaTimingFunction *)timingFunction;
+- (void)sz_moveToPoint:(CGPoint)newPoint
+              duration:(NSTimeInterval)duration
+           autoreverse:(BOOL)autoreverse
+           repeatCount:(CGFloat)repeatCount
+        timingFunction:(CAMediaTimingFunction *)timingFunction;
 
 @end

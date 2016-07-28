@@ -10,6 +10,6 @@
 
 @interface UIView (SZcaptureImage)
 
-- (UIImage *)sz_captureWithView;
+- (UIImage *)sz_captureImage;
 
 @end

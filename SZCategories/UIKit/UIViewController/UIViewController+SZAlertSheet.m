@@ -21,9 +21,9 @@
  *  @return UIAlertController
  */
 - (UIAlertController *)sz_alertWithTitle:(NSString *)title
-                              message:(NSString *)message
-                     destructiveTitle:(NSString *)destructiveTitle
-                   destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler {
+                                 message:(NSString *)message
+                        destructiveTitle:(NSString *)destructiveTitle
+                      destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler {
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:title
                                                                         message:message
                                                                  preferredStyle:UIAlertControllerStyleAlert];
@@ -49,9 +49,9 @@
  *  @return UIAlertController
  */
 - (UIAlertController *)sz_confirmTitle:(NSString *)title
-                            message:(NSString *)message
-                   destructiveTitle:(NSString *)destructiveTitle
-                 destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler {
+                               message:(NSString *)message
+                      destructiveTitle:(NSString *)destructiveTitle
+                    destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler {
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:title
                                                                         message:message
                                                                  preferredStyle:UIAlertControllerStyleAlert];
@@ -80,9 +80,9 @@
  *  @return UIAlertController
  */
 - (UIAlertController *)sz_promptWithTitle:(NSString *)title
-                      destructiveTitle:(NSString *)destructiveTitle
-                textFieldConfiguration:(void (^)(UITextField *textField))textFieldConfiguration
-                    destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler {
+                         destructiveTitle:(NSString *)destructiveTitle
+                   textFieldConfiguration:(void (^)(UITextField *textField))textFieldConfiguration
+                       destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler {
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:title
                                                                         message:nil
                                                                  preferredStyle:UIAlertControllerStyleAlert];
@@ -92,11 +92,11 @@
     [controller addAction:[UIAlertAction actionWithTitle:destructiveTitle ? destructiveTitle : NSLocalizedString(@"确定", nil)
                                                    style:UIAlertActionStyleDestructive
                                                  handler:^(UIAlertAction * _Nonnull action) {
-        if (destructiveHandler) {
-            destructiveHandler(controller);
-        }
-    }]];
-    
+                                                     if (destructiveHandler) {
+                                                         destructiveHandler(controller);
+                                                     }
+                                                 }]];
+
     [controller addTextFieldWithConfigurationHandler:textFieldConfiguration];
     [self presentViewController:controller animated:YES completion:nil];
     return controller;
@@ -113,9 +113,9 @@
  *  @return UIAlertController
  */
 - (UIAlertController *)sz_sheetWithTitle:(NSString *)title
-                              message:(NSString *)message
-                              actions:(NSArray *)actions
-                           sourceView:(UIView *)sourceView {
+                                 message:(NSString *)message
+                                 actions:(NSArray *)actions
+                              sourceView:(UIView *)sourceView {
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:title
                                                                         message:message
                                                                  preferredStyle:UIAlertControllerStyleActionSheet];

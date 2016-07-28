@@ -10,7 +10,7 @@
 
 @implementation UIView (SZcaptureImage)
 
-- (UIImage *)sz_captureWithView {
+- (UIImage *)sz_captureImage {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, [UIScreen mainScreen].scale);
     [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
     UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();

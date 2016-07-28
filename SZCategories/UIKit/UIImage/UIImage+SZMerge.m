@@ -29,7 +29,7 @@
 @end
 
 
-@implementation UIImage (Resize)
+@implementation UIImage (SZResize)
 
 - (UIImage *)sz_imageWithSize:(CGSize)size {
     UIGraphicsBeginImageContextWithOptions(size, NO, self.scale);
@@ -43,7 +43,7 @@
 
 
 
-@implementation UIImage (TintColor)
+@implementation UIImage (SZTintColor)
 
 - (UIImage *)sz_imageWithTintColor:(UIColor *)tintColor {
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0);
