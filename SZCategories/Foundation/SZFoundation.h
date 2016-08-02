@@ -24,6 +24,8 @@
 #import "NSObject+SZAssociatedObject.h"
 #import "NSObject+SZProperty.h"
 #import "NSObject+SZTimeProfile.h"
+#import "NSObject+SZNotification.h"
+#import "NSObject+SZKVO.h"
 
 #import "NSString+SZBase64.h"
 #import "NSString+SZDigital.h"

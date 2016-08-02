@@ -8,7 +8,7 @@
 
 #import "UIButton+SZCountDown.h"
 
-@interface UIButtonSZCountDownDelegate : NSObject
+@interface _UIButtonSZCountDownDelegate : NSObject
 
 @property (nonatomic, weak) UIButton *button;
 @property (nonatomic) int seconds;
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation UIButtonSZCountDownDelegate
+@implementation _UIButtonSZCountDownDelegate
 
 - (void)timerFiredHandler:(NSTimer *)timer {
     if (_seconds > 0 && _button) {
@@ -44,7 +44,7 @@
 - (void)sz_countDownSeconds:(int)seconds disabledTitleFormart:(NSString *)disabledTitleFormart {
     self.enabled = NO;
 
-    UIButtonSZCountDownDelegate *delegate = [[UIButtonSZCountDownDelegate alloc] init];
+    _UIButtonSZCountDownDelegate *delegate = [[_UIButtonSZCountDownDelegate alloc] init];
     delegate.button = self;
     delegate.seconds = seconds;
     delegate.disabledTitleFormart = disabledTitleFormart;

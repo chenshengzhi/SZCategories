@@ -67,6 +67,8 @@
 		247542A71D19202D0081B821 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247542A51D19202D0081B821 /* LaunchScreen.storyboard */; };
 		247542B21D19202D0081B821 /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 247542B11D19202D0081B821 /* DemoTests.m */; };
 		247542BD1D19202D0081B821 /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 247542BC1D19202D0081B821 /* DemoUITests.m */; };
+		24D3B6101D503E3100A1C01C /* NSObject+SZNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D3B60F1D503E3100A1C01C /* NSObject+SZNotification.m */; };
+		24D3B6131D50400E00A1C01C /* NSObject+SZKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D3B6121D50400E00A1C01C /* NSObject+SZKVO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +212,10 @@
 		247542B81D19202D0081B821 /* SZCategories.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SZCategories.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		247542BC1D19202D0081B821 /* DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoUITests.m; sourceTree = "<group>"; };
 		247542BE1D19202D0081B821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24D3B60E1D503E3100A1C01C /* NSObject+SZNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SZNotification.h"; sourceTree = "<group>"; };
+		24D3B60F1D503E3100A1C01C /* NSObject+SZNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SZNotification.m"; sourceTree = "<group>"; };
+		24D3B6111D50400E00A1C01C /* NSObject+SZKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SZKVO.h"; sourceTree = "<group>"; };
+		24D3B6121D50400E00A1C01C /* NSObject+SZKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SZKVO.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +345,10 @@
 				245652251D4733CF00DBCB4F /* NSObject+SZProperty.m */,
 				245652261D4733CF00DBCB4F /* NSObject+SZTimeProfile.h */,
 				245652271D4733CF00DBCB4F /* NSObject+SZTimeProfile.m */,
+				24D3B60E1D503E3100A1C01C /* NSObject+SZNotification.h */,
+				24D3B60F1D503E3100A1C01C /* NSObject+SZNotification.m */,
+				24D3B6111D50400E00A1C01C /* NSObject+SZKVO.h */,
+				24D3B6121D50400E00A1C01C /* NSObject+SZKVO.m */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -753,6 +763,7 @@
 				2456528B1D4733CF00DBCB4F /* NSArray+SZSafeAccess.m in Sources */,
 				2456529D1D4733CF00DBCB4F /* NSString+SZTrims.m in Sources */,
 				2456528F1D4733CF00DBCB4F /* NSDate+Helper.m in Sources */,
+				24D3B6131D50400E00A1C01C /* NSObject+SZKVO.m in Sources */,
 				245652911D4733CF00DBCB4F /* NSFileManager+SZPaths.m in Sources */,
 				245652B81D4733CF00DBCB4F /* UIView+SZVisuals.m in Sources */,
 				245652A61D4733CF00DBCB4F /* UIImage+SZColorCreate.m in Sources */,
@@ -764,6 +775,7 @@
 				245652AC1D4733CF00DBCB4F /* UIScrollView+SZHasButton.m in Sources */,
 				245652B51D4733CF00DBCB4F /* UIView+SZRecursiveDescription.m in Sources */,
 				245652951D4733CF00DBCB4F /* NSObject+SZTimeProfile.m in Sources */,
+				24D3B6101D503E3100A1C01C /* NSObject+SZNotification.m in Sources */,
 				2456528D1D4733CF00DBCB4F /* NSData+SZBase64.m in Sources */,
 				2456528C1D4733CF00DBCB4F /* NSBundle+SZAppVersion.m in Sources */,
 				245652B41D4733CF00DBCB4F /* UIView+SZNib.m in Sources */,

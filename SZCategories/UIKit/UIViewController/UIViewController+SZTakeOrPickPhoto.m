@@ -12,7 +12,7 @@
 #import <objc/runtime.h>
 
 #pragma mark - PAImagePickerDelegate -
-@interface PAImagePickerDelegate : NSObject <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface _PAImagePickerDelegate : NSObject <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic) BOOL allowsEditing;
 
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation PAImagePickerDelegate
+@implementation _PAImagePickerDelegate
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:nil];
@@ -61,7 +61,7 @@ static char PAImagePickerDelegateKey;
 - (void)sz_pickAnPhotoWithAllowEditing:(BOOL)allowsEditing
                             sourceView:(UIView *)sourceView
                                success:(PAImagePickerSuccessBlock)successBlock {
-    PAImagePickerDelegate *delegate = [[PAImagePickerDelegate alloc] init];
+    _PAImagePickerDelegate *delegate = [[_PAImagePickerDelegate alloc] init];
     delegate.allowsEditing = allowsEditing;
     delegate.successBlock = successBlock;
 
@@ -95,7 +95,7 @@ static char PAImagePickerDelegateKey;
         return;
     }
 
-    PAImagePickerDelegate *delegate = [[PAImagePickerDelegate alloc] init];
+    _PAImagePickerDelegate *delegate = [[_PAImagePickerDelegate alloc] init];
     delegate.allowsEditing = allowsEditing;
     delegate.successBlock = successBlock;
 
