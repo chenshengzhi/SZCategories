@@ -45,7 +45,7 @@ static char SZ_NSObserverDictKey;
     NSMutableDictionary *dict = objc_getAssociatedObject(self, &SZ_NSObserverDictKey);
     if (!dict) {
         dict = [NSMutableDictionary dictionary];
-        objc_setAssociatedObject(self, &SZ_NSObserverDictKey, dict, OBJC_ASSOCIATION_RETAIN);
+        objc_setAssociatedObject(self, &SZ_NSObserverDictKey, dict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     dict[name] = observerWrapper;
 }
@@ -61,7 +61,7 @@ static char SZ_NSObserverDictKey;
 }
 
 - (void)sz_cancelObserveAllNotification {
-    objc_setAssociatedObject(self, &SZ_NSObserverDictKey, nil, OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject(self, &SZ_NSObserverDictKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
