@@ -28,7 +28,7 @@
 
 - (void)dealloc {
     if (self.object) {
-        [self.object removeObserver:self forKeyPath:self.keyPath];
+        [self.observer sz_cancelObserveObject:self.observer forKeyPath:self.keyPath];
     }
 }
 
@@ -71,11 +71,11 @@
 static char SZ_KVOObserverDictKey;
 static char SZ_KVOObserveHostKey;
 
-- (void)sz_kvoCacheWrapper:(NSObject *)wrapper forObject:(NSObject *)object keyPath:(NSString *)keyPath key:(const void *)key {
-    NSMutableDictionary *dict = objc_getAssociatedObject(object, key);
+- (void)sz_kvoCacheWrapper:(NSObject *)wrapper forObject:(NSObject *)object keyPath:(NSString *)keyPath associateKey:(void *)associateKey {
+    NSMutableDictionary *dict = objc_getAssociatedObject(self, associateKey);
     if (!dict) {
         dict = [NSMutableDictionary dictionary];
-        objc_setAssociatedObject(self, key, dict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        objc_setAssociatedObject(self, associateKey, dict, OBJC_ASSOCIATION_RETAIN);
     }
     NSString *dictKey = [NSString stringWithFormat:@"%p-%@", object, keyPath];
     dict[dictKey] = wrapper;
@@ -96,8 +96,8 @@ static char SZ_KVOObserveHostKey;
     hostWrapper.observerWrapper = observerWrapper;
     [hostWrapper setHost:object];
 
-    [self sz_kvoCacheWrapper:observerWrapper forObject:object keyPath:keyPath key:&SZ_KVOObserverDictKey];
-    [object sz_kvoCacheWrapper:hostWrapper forObject:self keyPath:keyPath key:&SZ_KVOObserveHostKey];
+    [self sz_kvoCacheWrapper:observerWrapper forObject:object keyPath:keyPath associateKey:&SZ_KVOObserverDictKey];
+    [object sz_kvoCacheWrapper:hostWrapper forObject:self keyPath:keyPath associateKey:&SZ_KVOObserveHostKey];
 }
 
 - (void)sz_cancelObserveObject:(NSObject *)object forKeyPath:(NSString *)keyPath {
@@ -112,7 +112,7 @@ static char SZ_KVOObserveHostKey;
 }
 
 - (void)sz_cancelObserveAllObject {
-    objc_setAssociatedObject(self, &SZ_KVOObserverDictKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &SZ_KVOObserverDictKey, nil, OBJC_ASSOCIATION_RETAIN);
 }
 
 @end
