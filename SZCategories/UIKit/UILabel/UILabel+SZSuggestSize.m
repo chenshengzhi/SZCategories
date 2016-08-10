@@ -22,17 +22,18 @@
     if (!string) {
         return CGSizeZero;
     }
-    return [string boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX)
-                                options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-                                context:nil].size;
+    CGSize size = [string boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX)
+                                       options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                       context:nil].size;
+    return CGSizeMake(ceil(size.width), ceil(size.height));
 }
 
 - (CGSize)sz_suggestSizeForString:(NSString *)string width:(CGFloat)width {
     if (!string) {
         return CGSizeZero;
     }
-    return [self sz_suggestSizeForAttributedString:[[NSAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: self.font}]
-                                             width:width];
+    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:string attributes:@{NSFontAttributeName: self.font}];
+    return [self sz_suggestSizeForAttributedString:attributedString width:width];
 }
 
 @end
