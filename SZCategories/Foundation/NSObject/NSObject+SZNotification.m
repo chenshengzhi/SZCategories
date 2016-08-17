@@ -9,6 +9,8 @@
 #import "NSObject+SZNotification.h"
 #import <objc/runtime.h>
 
+static NSString * const SZNilNotificationName = @"sz_nil";
+
 @interface _SZNSObserverWrapper : NSObject
 
 @property (nonatomic, strong) id<NSObject>observer;
@@ -47,12 +49,18 @@ static char SZ_NSObserverDictKey;
         dict = [NSMutableDictionary dictionary];
         objc_setAssociatedObject(self, &SZ_NSObserverDictKey, dict, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
+    if (!name) {
+        name = SZNilNotificationName;
+    }
     dict[name] = observerWrapper;
 }
 
 - (void)sz_cancelObserveNotificationName:(NSString *)name {
     NSMutableDictionary *dict = objc_getAssociatedObject(self, &SZ_NSObserverDictKey);
     if (dict) {
+        if (!name) {
+            name = SZNilNotificationName;
+        }
         [dict removeObjectForKey:name];
         if (dict.count == 0) {
             [self sz_cancelObserveAllNotification];
