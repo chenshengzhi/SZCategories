@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
     s.name         = "SZCategories"
-    s.version      = "1.2.4"
+    s.version      = "1.3.0"
     s.summary      = "some useful categories"
     s.homepage     = "https://github.com/chenshengzhi/SZCategories"
     s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -78,6 +78,11 @@ Pod::Spec.new do |s|
 
         ss.subspec 'UIColor' do |sss|
             sss.source_files = 'SZCategories/UIKit/UIColor/*.{h,m}'
+            sss.frameworks   = 'Foundation', 'UIKit'
+        end
+
+        ss.subspec 'UIControl' do |sss|
+            sss.source_files = 'SZCategories/UIKit/UIControl/*.{h,m}'
             sss.frameworks   = 'Foundation', 'UIKit'
         end
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24353EBC1D65ACCB001CF108 /* UIControl+SZConstraintByTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 24353EBB1D65ACCB001CF108 /* UIControl+SZConstraintByTextInput.m */; };
 		2456528B1D4733CF00DBCB4F /* NSArray+SZSafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 2456520C1D4733CF00DBCB4F /* NSArray+SZSafeAccess.m */; };
 		2456528C1D4733CF00DBCB4F /* NSBundle+SZAppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2456520F1D4733CF00DBCB4F /* NSBundle+SZAppVersion.m */; };
 		2456528D1D4733CF00DBCB4F /* NSData+SZBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 245652121D4733CF00DBCB4F /* NSData+SZBase64.m */; };
@@ -89,6 +90,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24353EBA1D65ACCB001CF108 /* UIControl+SZConstraintByTextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+SZConstraintByTextInput.h"; sourceTree = "<group>"; };
+		24353EBB1D65ACCB001CF108 /* UIControl+SZConstraintByTextInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+SZConstraintByTextInput.m"; sourceTree = "<group>"; };
 		2456520B1D4733CF00DBCB4F /* NSArray+SZSafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SZSafeAccess.h"; sourceTree = "<group>"; };
 		2456520C1D4733CF00DBCB4F /* NSArray+SZSafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SZSafeAccess.m"; sourceTree = "<group>"; };
 		2456520E1D4733CF00DBCB4F /* NSBundle+SZAppVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SZAppVersion.h"; sourceTree = "<group>"; };
@@ -243,6 +246,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24353EB61D65A106001CF108 /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+				24353EBA1D65ACCB001CF108 /* UIControl+SZConstraintByTextInput.h */,
+				24353EBB1D65ACCB001CF108 /* UIControl+SZConstraintByTextInput.m */,
+			);
+			path = UIControl;
+			sourceTree = "<group>";
+		};
 		245652081D4733CF00DBCB4F /* SZCategories */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +400,7 @@
 				245652401D4733CF00DBCB4F /* SZUIKit.h */,
 				245652411D4733CF00DBCB4F /* UIButton */,
 				245652461D4733CF00DBCB4F /* UIColor */,
+				24353EB61D65A106001CF108 /* UIControl */,
 				2456524D1D4733CF00DBCB4F /* UIFont */,
 				245652501D4733CF00DBCB4F /* UIImage */,
 				245652551D4733CF00DBCB4F /* UILabel */,
@@ -793,6 +806,7 @@
 				245652B01D4733CF00DBCB4F /* UIView+SZAlignment.m in Sources */,
 				2456529C1D4733CF00DBCB4F /* NSString+SZRegexCategory.m in Sources */,
 				245652921D4733CF00DBCB4F /* NSNumber+SZRound.m in Sources */,
+				24353EBC1D65ACCB001CF108 /* UIControl+SZConstraintByTextInput.m in Sources */,
 				245652A71D4733CF00DBCB4F /* UIImage+SZMerge.m in Sources */,
 				245652A81D4733CF00DBCB4F /* UILabel+SZSuggestSize.m in Sources */,
 				2456529F1D4733CF00DBCB4F /* NSString+SZUtil.m in Sources */,

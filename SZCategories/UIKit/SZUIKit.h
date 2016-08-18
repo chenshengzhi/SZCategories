@@ -13,6 +13,8 @@
 #import "UIColor+SZHEX.h"
 #import "UIColor+SZRandom.h"
 
+#import "UIControl+SZConstraintByTextInput.h"
+
 #import "UIImage+SZColorCreate.h"
 #import "UIImage+SZMerge.h"
 
