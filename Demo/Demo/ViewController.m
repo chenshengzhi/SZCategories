@@ -22,8 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self.button sz_addConstraintTo:self.textField min:11 max:11];
-    [self.button sz_addConstraintTo:self.textView min:6 max:20];
+    [self.button sz_addConstraintWithTextInput:self.textField regex:@"^1\\d{10}"];
+    [self.button sz_addConstraintWithTextInput:self.textView min:6 max:20];
 }
 
 - (void)didReceiveMemoryWarning {
