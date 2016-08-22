@@ -39,4 +39,10 @@
     return [self popToViewController:[self sz_findViewController:className] animated:YES];
 }
 
+- (NSArray *)sz_popViewControllerCount:(NSInteger)count animated:(BOOL)animated {
+    NSAssert(count < self.viewControllers.count, @"out of index");
+    UIViewController *toVc = self.viewControllers[self.viewControllers.count - count - 1];
+    return [self popToViewController:toVc animated:animated];
+}
+
 @end

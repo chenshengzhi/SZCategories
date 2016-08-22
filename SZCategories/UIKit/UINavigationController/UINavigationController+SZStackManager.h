@@ -11,8 +11,13 @@
 @interface UINavigationController (SZStackManager)
 
 - (id)sz_findViewController:(NSString *)className;
+
 - (BOOL)sz_isOnlyContainRootViewController;
+
 - (UIViewController *)sz_rootViewController;
+
 - (NSArray *)sz_popToViewControllerWithClassName:(NSString *)className animated:(BOOL)animated;
+
+- (NSArray *)sz_popViewControllerCount:(NSInteger)count animated:(BOOL)animated ;
 
 @end
