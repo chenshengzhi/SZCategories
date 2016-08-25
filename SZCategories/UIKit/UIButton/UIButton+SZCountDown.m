@@ -12,26 +12,29 @@
 
 @property (nonatomic, weak) UIButton *button;
 @property (nonatomic) int seconds;
-@property (nonatomic, strong) NSString *disabledTitleFormart;
+@property (nonatomic, strong) NSString *titleFormart;
+@property (nonatomic) BOOL disableWhenProcessing;
+@property (nonatomic) BOOL disableWhenFinished;
 
 @end
 
 @implementation _UIButtonSZCountDownDelegate
 
 - (void)timerFiredHandler:(NSTimer *)timer {
-    if (_seconds > 0 && _button) {
-        if ((_button.state & UIControlStateDisabled) > 0) {
-            NSString *title = [NSString stringWithFormat:_disabledTitleFormart, _seconds];
-            [_button setTitle:title forState:UIControlStateDisabled];
-            _seconds--;
+    if (self.seconds > 0 && self.button) {
+        self.button.enabled = !self.disableWhenProcessing;
+        if ((self.button.state & UIControlStateDisabled) > 0) {
+            NSString *title = [NSString stringWithFormat:self.titleFormart, self.seconds];
+            [self.button setTitle:title forState:UIControlStateDisabled];
+            self.seconds--;
         } else {
             [timer invalidate];
         }
     } else {
         [timer invalidate];
 
-        if (_button) {
-            _button.enabled = YES;
+        if (self.button) {
+            self.button.enabled = !self.disableWhenFinished;
         }
     }
 }
@@ -41,14 +44,37 @@
 
 @implementation UIButton (SZCountDown)
 
-- (void)sz_countDownSeconds:(int)seconds disabledTitleFormart:(NSString *)disabledTitleFormart {
-    self.enabled = NO;
+- (void)sz_countdownAndDisableWhenFinishedWithSeconds:(int)seconds
+                                         titleFormart:(NSString *)titleFormart {
+    [self sz_countdownWithSeconds:seconds
+                     titleFormart:titleFormart
+            disableWhenProcessing:NO
+              disableWhenFinished:YES];
+}
 
+- (void)sz_countdownAndDisableWhenProcessingWithSeconds:(int)seconds
+                                           titleFormart:(NSString *)titleFormart {
+    [self sz_countdownWithSeconds:seconds
+                     titleFormart:titleFormart
+            disableWhenProcessing:YES
+              disableWhenFinished:NO];
+}
+
+- (void)sz_countdownWithSeconds:(int)seconds
+                   titleFormart:(NSString *)titleFormart
+          disableWhenProcessing:(BOOL)disableWhenProcessing
+            disableWhenFinished:(BOOL)disableWhenFinished {
     _UIButtonSZCountDownDelegate *delegate = [[_UIButtonSZCountDownDelegate alloc] init];
     delegate.button = self;
     delegate.seconds = seconds;
-    delegate.disabledTitleFormart = disabledTitleFormart;
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:delegate selector:@selector(timerFiredHandler:) userInfo:nil repeats:YES];
+    delegate.titleFormart = titleFormart;
+    delegate.disableWhenProcessing = disableWhenProcessing;
+    delegate.disableWhenFinished = disableWhenFinished;
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1
+                                                      target:delegate
+                                                    selector:@selector(timerFiredHandler:)
+                                                    userInfo:nil
+                                                     repeats:YES];
     [timer fire];
 }
 
