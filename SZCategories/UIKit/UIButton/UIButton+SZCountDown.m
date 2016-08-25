@@ -12,7 +12,7 @@
 
 @property (nonatomic, weak) UIButton *button;
 @property (nonatomic) int seconds;
-@property (nonatomic, strong) NSString *titleFormart;
+@property (nonatomic, copy) NSString *(^titleFormartBlock)(int seconds);
 @property (nonatomic) BOOL disableWhenProcessing;
 @property (nonatomic) BOOL disableWhenFinished;
 
@@ -24,8 +24,7 @@
     if (self.seconds > 0 && self.button) {
         self.button.enabled = !self.disableWhenProcessing;
         if ((self.button.state & UIControlStateDisabled) > 0) {
-            NSString *title = [NSString stringWithFormat:self.titleFormart, self.seconds];
-            [self.button setTitle:title forState:UIControlStateDisabled];
+            [self.button setTitle:self.titleFormartBlock(self.seconds) forState:UIControlStateDisabled];
             self.seconds--;
         } else {
             [timer invalidate];
@@ -45,29 +44,29 @@
 @implementation UIButton (SZCountDown)
 
 - (void)sz_countdownAndDisableWhenFinishedWithSeconds:(int)seconds
-                                         titleFormart:(NSString *)titleFormart {
+                                    titleFormartBlock:(NSString *(^)(int seconds))titleFormartBlock {
     [self sz_countdownWithSeconds:seconds
-                     titleFormart:titleFormart
+                titleFormartBlock:titleFormartBlock
             disableWhenProcessing:NO
               disableWhenFinished:YES];
 }
 
 - (void)sz_countdownAndDisableWhenProcessingWithSeconds:(int)seconds
-                                           titleFormart:(NSString *)titleFormart {
+                                      titleFormartBlock:(NSString *(^)(int seconds))titleFormartBlock {
     [self sz_countdownWithSeconds:seconds
-                     titleFormart:titleFormart
+                titleFormartBlock:titleFormartBlock
             disableWhenProcessing:YES
               disableWhenFinished:NO];
 }
 
 - (void)sz_countdownWithSeconds:(int)seconds
-                   titleFormart:(NSString *)titleFormart
+              titleFormartBlock:(NSString *(^)(int seconds))titleFormartBlock
           disableWhenProcessing:(BOOL)disableWhenProcessing
             disableWhenFinished:(BOOL)disableWhenFinished {
     _UIButtonSZCountDownDelegate *delegate = [[_UIButtonSZCountDownDelegate alloc] init];
     delegate.button = self;
     delegate.seconds = seconds;
-    delegate.titleFormart = titleFormart;
+    delegate.titleFormartBlock = titleFormartBlock;
     delegate.disableWhenProcessing = disableWhenProcessing;
     delegate.disableWhenFinished = disableWhenFinished;
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1

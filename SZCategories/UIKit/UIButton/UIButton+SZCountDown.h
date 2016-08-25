@@ -11,13 +11,13 @@
 @interface UIButton (SZCountDown)
 
 - (void)sz_countdownAndDisableWhenFinishedWithSeconds:(int)seconds
-                                         titleFormart:(NSString *)titleFormart;
+                                    titleFormartBlock:(NSString *(^)(int seconds))titleFormartBlock;
 
 - (void)sz_countdownAndDisableWhenProcessingWithSeconds:(int)seconds
-                                           titleFormart:(NSString *)titleFormart;
+                                      titleFormartBlock:(NSString *(^)(int seconds))titleFormartBlock;
 
 - (void)sz_countdownWithSeconds:(int)seconds
-                   titleFormart:(NSString *)titleFormart
+              titleFormartBlock:(NSString *(^)(int seconds))titleFormartBlock
           disableWhenProcessing:(BOOL)disableWhenProcessing
             disableWhenFinished:(BOOL)disableWhenFinished;
 
