@@ -68,6 +68,7 @@
 		247542A71D19202D0081B821 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247542A51D19202D0081B821 /* LaunchScreen.storyboard */; };
 		247542B21D19202D0081B821 /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 247542B11D19202D0081B821 /* DemoTests.m */; };
 		247542BD1D19202D0081B821 /* DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 247542BC1D19202D0081B821 /* DemoUITests.m */; };
+		24BC06A31D76D28A00361C79 /* NSString+SZMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BC06A21D76D28A00361C79 /* NSString+SZMoney.m */; };
 		24D3B6101D503E3100A1C01C /* NSObject+SZNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D3B60F1D503E3100A1C01C /* NSObject+SZNotification.m */; };
 		24D3B6131D50400E00A1C01C /* NSObject+SZKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D3B6121D50400E00A1C01C /* NSObject+SZKVO.m */; };
 /* End PBXBuildFile section */
@@ -215,6 +216,8 @@
 		247542B81D19202D0081B821 /* SZCategories.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SZCategories.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		247542BC1D19202D0081B821 /* DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoUITests.m; sourceTree = "<group>"; };
 		247542BE1D19202D0081B821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24BC06A11D76D28A00361C79 /* NSString+SZMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SZMoney.h"; sourceTree = "<group>"; };
+		24BC06A21D76D28A00361C79 /* NSString+SZMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SZMoney.m"; sourceTree = "<group>"; };
 		24D3B60E1D503E3100A1C01C /* NSObject+SZNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SZNotification.h"; sourceTree = "<group>"; };
 		24D3B60F1D503E3100A1C01C /* NSObject+SZNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SZNotification.m"; sourceTree = "<group>"; };
 		24D3B6111D50400E00A1C01C /* NSObject+SZKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SZKVO.h"; sourceTree = "<group>"; };
@@ -390,6 +393,8 @@
 				2456523C1D4733CF00DBCB4F /* NSString+SZUtil.m */,
 				245652BE1D473BDE00DBCB4F /* NSString+SZFilePath.h */,
 				245652BF1D473BDE00DBCB4F /* NSString+SZFilePath.m */,
+				24BC06A11D76D28A00361C79 /* NSString+SZMoney.h */,
+				24BC06A21D76D28A00361C79 /* NSString+SZMoney.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -799,6 +804,7 @@
 				245652A41D4733CF00DBCB4F /* UIColor+SZRandom.m in Sources */,
 				245652B91D4733CF00DBCB4F /* UIViewController+SZAlertSheet.m in Sources */,
 				245652961D4733CF00DBCB4F /* NSString+SZBase64.m in Sources */,
+				24BC06A31D76D28A00361C79 /* NSString+SZMoney.m in Sources */,
 				245652AF1D4733CF00DBCB4F /* UITextView+SZSelect.m in Sources */,
 				245652BD1D4733CF00DBCB4F /* UIWindow+SZHierarchy.m in Sources */,
 				245652B61D4733CF00DBCB4F /* UIView+SZTouchAreaExtend.m in Sources */,

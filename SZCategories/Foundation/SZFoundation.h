@@ -38,3 +38,4 @@
 #import "NSString+SZUtil.h"
 #import "NSString+SZHTMLText.h"
 #import "NSString+SZFilePath.h"
+#import "NSString+SZMoney.h"
