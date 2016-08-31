@@ -7,10 +7,14 @@
 //
 
 #import "UIButton+SZCountDown.h"
+#import <objc/runtime.h>
+
+static char SZ_UIButtonCountdownKey;
 
 @interface _UIButtonSZCountDownDelegate : NSObject
 
 @property (nonatomic, weak) UIButton *button;
+@property (nonatomic, weak) NSTimer *timer;
 @property (nonatomic) int seconds;
 @property (nonatomic, copy) NSString *(^titleFormartBlock)(int seconds);
 @property (nonatomic) BOOL disableWhenProcessing;
@@ -69,12 +73,22 @@
     delegate.titleFormartBlock = titleFormartBlock;
     delegate.disableWhenProcessing = disableWhenProcessing;
     delegate.disableWhenFinished = disableWhenFinished;
+    objc_setAssociatedObject(self, &SZ_UIButtonCountdownKey, delegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1
                                                       target:delegate
                                                     selector:@selector(timerFiredHandler:)
                                                     userInfo:nil
                                                      repeats:YES];
+    delegate.timer = timer;
     [timer fire];
+}
+
+- (void)sz_cancelCountdown {
+    _UIButtonSZCountDownDelegate *delegate = objc_getAssociatedObject(self, &SZ_UIButtonCountdownKey);
+    if (delegate && delegate.timer) {
+        [delegate.timer invalidate];
+        objc_setAssociatedObject(self, &SZ_UIButtonCountdownKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
 }
 
 @end

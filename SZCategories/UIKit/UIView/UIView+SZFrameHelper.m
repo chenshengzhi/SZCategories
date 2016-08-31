@@ -106,4 +106,17 @@
     self.center = CGPointMake(self.center.x, centerY);
 }
 
+
+- (void)sz_scaleAspectToWidth:(CGFloat)width {
+    CGFloat scale = self.height / self.width;
+    self.width = width;
+    self.height = ceil(self.width * scale);
+}
+
+- (void)sz_scaleAspectToHeight:(CGFloat)height {
+    CGFloat scale = self.width / self.height;
+    self.height = height;
+    self.width = ceil(self.height * scale);
+}
+
 @end

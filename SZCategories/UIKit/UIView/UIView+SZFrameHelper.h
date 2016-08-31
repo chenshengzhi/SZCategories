@@ -25,4 +25,9 @@
 @property (nonatomic) CGFloat width;
 @property (nonatomic) CGFloat height;
 
+
+- (void)sz_scaleAspectToWidth:(CGFloat)width;
+
+- (void)sz_scaleAspectToHeight:(CGFloat)height;
+
 @end

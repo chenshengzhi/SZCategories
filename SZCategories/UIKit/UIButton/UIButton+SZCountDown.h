@@ -21,4 +21,6 @@
           disableWhenProcessing:(BOOL)disableWhenProcessing
             disableWhenFinished:(BOOL)disableWhenFinished;
 
+- (void)sz_cancelCountdown;
+
 @end
