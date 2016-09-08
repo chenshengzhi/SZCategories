@@ -27,8 +27,11 @@ static char SZ_UIButtonCountdownKey;
 - (void)timerFiredHandler:(NSTimer *)timer {
     if (self.seconds > 0 && self.button) {
         self.button.enabled = !self.disableWhenProcessing;
-        if ((self.button.state & UIControlStateDisabled) > 0) {
-            [self.button setTitle:self.titleFormartBlock(self.seconds) forState:UIControlStateDisabled];
+        BOOL isValid = (self.disableWhenProcessing && (self.button.state & UIControlStateDisabled) > 0)
+        || (!self.disableWhenProcessing && (self.button.state & UIControlStateDisabled) == 0);
+        if (isValid) {
+            UIControlState state = self.disableWhenProcessing ? UIControlStateDisabled : UIControlStateNormal;
+            [self.button setTitle:self.titleFormartBlock(self.seconds) forState:state];
             self.seconds--;
         } else {
             [timer invalidate];
@@ -74,12 +77,13 @@ static char SZ_UIButtonCountdownKey;
     delegate.disableWhenProcessing = disableWhenProcessing;
     delegate.disableWhenFinished = disableWhenFinished;
     objc_setAssociatedObject(self, &SZ_UIButtonCountdownKey, delegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1
-                                                      target:delegate
-                                                    selector:@selector(timerFiredHandler:)
-                                                    userInfo:nil
-                                                     repeats:YES];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:1
+                                             target:delegate
+                                           selector:@selector(timerFiredHandler:)
+                                           userInfo:nil
+                                            repeats:YES];
     delegate.timer = timer;
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     [timer fire];
 }
 

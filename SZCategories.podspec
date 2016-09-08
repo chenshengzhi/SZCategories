@@ -2,11 +2,11 @@
 Pod::Spec.new do |s|
 
     s.name         = "SZCategories"
-    s.version      = "1.3.7"
+    s.version      = "1.3.8"
     s.summary      = "some useful categories"
     s.homepage     = "https://github.com/chenshengzhi/SZCategories"
     s.license      = { :type => 'MIT', :file => 'LICENSE' }
-    s.author       = { "陈圣治" => "csz2136@163.com" }
+    s.author       = { "陈圣治" => "329012084@qq.com" }
     s.platform     = :ios, "7.0"
     s.ios.deployment_target = "7.0"
     s.source       = { :git => "https://github.com/chenshengzhi/SZCategories.git", :tag => s.version.to_s }
