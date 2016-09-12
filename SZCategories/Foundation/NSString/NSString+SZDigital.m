@@ -19,7 +19,7 @@
 
 //判断是否为浮点形
 - (BOOL)sz_isPureFloat {
-    NSString *regex = [NSString stringWithFormat:@"^[0-9]\\.{0,1}[0-9]{0,}$"];
+    NSString *regex = [NSString stringWithFormat:@"^[0-9]+(\\.[0-9]{1,})?$"];
     NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
     return [pre evaluateWithObject:self];
 }
