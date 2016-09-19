@@ -135,6 +135,17 @@ static char SZConstraintByTextInputKey;
 
 
 - (void)textDidChangeHandler:(NSNotification *)note {
+    BOOL containSender = NO;
+    for (_SZConstraintByTextInputItem *item in self.items) {
+        if (item.textInput == note.object) {
+            containSender = YES;
+            break;
+        }
+    }
+    if (!containSender) {
+        return;
+    }
+
     BOOL allSatified = YES;
     for (_SZConstraintByTextInputItem *item in self.items) {
         if (![item isSatisfied]) {
