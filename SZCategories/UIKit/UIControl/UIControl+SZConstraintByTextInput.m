@@ -123,14 +123,18 @@ static char SZConstraintByTextInputKey;
                                                  selector:@selector(textDidChangeHandler:)
                                                      name:UITextFieldTextDidChangeNotification
                                                    object:nil];
+
+        [[NSNotificationCenter defaultCenter] postNotificationName:UITextFieldTextDidChangeNotification
+                                                            object:item.textInput];
     } else if ([item.textInput isKindOfClass:[UITextView class]]) {
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(textDidChangeHandler:)
                                                      name:UITextViewTextDidChangeNotification
                                                    object:nil];
-    }
 
-    [self textDidChangeHandler:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification
+                                                            object:item.textInput];
+    }
 }
 
 

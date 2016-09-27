@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
     s.name         = "SZCategories"
-    s.version      = "1.3.10"
+    s.version      = "1.3.11"
     s.summary      = "some useful categories"
     s.homepage     = "https://github.com/chenshengzhi/SZCategories"
     s.license      = { :type => 'MIT', :file => 'LICENSE' }
