@@ -10,6 +10,8 @@
 
 @interface NSBundle (SZAppVersion)
 
-+ (NSString *)sz_version;
++ (NSString *)sz_bundleShortVersionString;
+
++ (NSString *)sz_bundleVersion;
 
 @end

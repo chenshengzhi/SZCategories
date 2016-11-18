@@ -10,10 +10,14 @@
 
 @implementation NSBundle (SZAppVersion)
 
-+ (NSString *)sz_version {
++ (NSString *)sz_bundleShortVersionString {
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
-    NSString *version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
-    return version;
+    return [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+}
+
++ (NSString *)sz_bundleVersion {
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    return [infoDictionary objectForKey:@"CFBundleVersion"];
 }
 
 @end
