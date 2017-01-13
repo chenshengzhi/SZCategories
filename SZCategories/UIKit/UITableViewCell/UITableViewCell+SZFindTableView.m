@@ -8,6 +8,8 @@
 
 #import "UITableViewCell+SZFindTableView.h"
 
+#define UITableViewCellSeparatorViewClassNameString @"_UITableViewCellSeparatorView"
+
 @implementation UITableViewCell (SZFindTableView)
 
 - (UITableView *)sz_tableView {
@@ -16,6 +18,28 @@
         superView = superView.superview;
     }
     return (UITableView *)superView;
+}
+
+- (UIView *)sz_topSeparatorView {
+    for (UIView *separatorView in self.subviews) {
+        if ([separatorView isKindOfClass:NSClassFromString(UITableViewCellSeparatorViewClassNameString)]) {
+            if (separatorView.frame.origin.y == 0) {
+                return separatorView;
+            }
+        }
+    }
+    return nil;
+}
+
+- (UIView *)sz_bottomSeparatorView {
+    for (UIView *separatorView in self.subviews) {
+        if ([separatorView isKindOfClass:NSClassFromString(UITableViewCellSeparatorViewClassNameString)]) {
+            if (separatorView.frame.origin.y > 0) {
+                return separatorView;
+            }
+        }
+    }
+    return nil;
 }
 
 @end

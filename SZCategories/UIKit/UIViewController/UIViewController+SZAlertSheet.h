@@ -41,6 +41,25 @@
                     destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler;
 
 /**
+ *  确认提示, 有取消按钮 和 确认按钮
+ *
+ *  @param title              标题
+ *  @param message            信息
+ *  @param cancelTitle        取消按钮标题
+ *  @param destructiveTitle   确认按钮标题
+ *  @param cancelHandler      取消按钮点击处理
+ *  @param destructiveHandler 确认按钮点击处理
+ *
+ *  @return UIAlertController
+ */
+- (UIAlertController *)sz_confirmTitle:(NSString *)title
+                               message:(NSString *)message
+                           cancelTitle:(NSString *)cancelTitle
+                      destructiveTitle:(NSString *)destructiveTitle
+                         cancelHandler:(void (^)(UIAlertController * controller))cancelHandler
+                    destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler;
+
+/**
  *  带输入框的确认提示, 有取消按钮 和 确认按钮
  *
  *  @param title                  标题
@@ -53,6 +72,25 @@
 - (UIAlertController *)sz_promptWithTitle:(NSString *)title
                          destructiveTitle:(NSString *)destructiveTitle
                    textFieldConfiguration:(void (^)(UITextField *textField))textFieldConfiguration
+                       destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler;
+
+/**
+ *  带输入框的确认提示, 有取消按钮 和 确认按钮
+ *
+ *  @param title                  标题
+ *  @param cancelTitle            取消按钮标题
+ *  @param destructiveTitle       确认按钮标题
+ *  @param textFieldConfiguration 输入框配置
+ *  @param cancelHandler          取消按钮点击处理
+ *  @param destructiveHandler     确认按钮点击处理
+ *
+ *  @return UIAlertController
+ */
+- (UIAlertController *)sz_promptWithTitle:(NSString *)title
+                              cancelTitle:(NSString *)cancelTitle
+                         destructiveTitle:(NSString *)destructiveTitle
+                   textFieldConfiguration:(void (^)(UITextField *textField))textFieldConfiguration
+                            cancelHandler:(void (^)(UIAlertController * controller))cancelHandler
                        destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler;
 
 /**

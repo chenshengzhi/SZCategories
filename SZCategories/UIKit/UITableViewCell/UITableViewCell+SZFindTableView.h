@@ -12,4 +12,8 @@
 
 - (UITableView *)sz_tableView;
 
+- (UIView *)sz_topSeparatorView;
+
+- (UIView *)sz_bottomSeparatorView;
+
 @end

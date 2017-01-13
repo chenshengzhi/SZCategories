@@ -30,9 +30,11 @@
     [controller addAction:[UIAlertAction actionWithTitle:destructiveTitle ? destructiveTitle : NSLocalizedString(@"确定", nil)
                                                    style:UIAlertActionStyleDestructive
                                                  handler:^(UIAlertAction * _Nonnull action) {
-                                                     if (destructiveHandler) {
-                                                         destructiveHandler(controller);
-                                                     }
+                                                     dispatch_async(dispatch_get_main_queue(), ^(void){
+                                                         if (destructiveHandler) {
+                                                             destructiveHandler(controller);
+                                                         }
+                                                     });
                                                  }]];
     [self presentViewController:controller animated:YES completion:nil];
     return controller;
@@ -52,18 +54,52 @@
                                message:(NSString *)message
                       destructiveTitle:(NSString *)destructiveTitle
                     destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler {
+    return [self sz_confirmTitle:title
+                         message:message
+                     cancelTitle:nil
+                destructiveTitle:destructiveTitle
+                   cancelHandler:nil
+              destructiveHandler:destructiveHandler];
+}
+
+/**
+ *  确认提示, 有取消按钮 和 确认按钮
+ *
+ *  @param title              标题
+ *  @param message            信息
+ *  @param cancelTitle        取消按钮标题
+ *  @param destructiveTitle   确认按钮标题
+ *  @param cancelHandler      取消按钮点击处理
+ *  @param destructiveHandler 确认按钮点击处理
+ *
+ *  @return UIAlertController
+ */
+- (UIAlertController *)sz_confirmTitle:(NSString *)title
+                               message:(NSString *)message
+                           cancelTitle:(NSString *)cancelTitle
+                      destructiveTitle:(NSString *)destructiveTitle
+                         cancelHandler:(void (^)(UIAlertController * controller))cancelHandler
+                    destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler {
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:title
                                                                         message:message
                                                                  preferredStyle:UIAlertControllerStyleAlert];
-    [controller addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"取消", nil)
+    [controller addAction:[UIAlertAction actionWithTitle:cancelTitle ? cancelTitle : NSLocalizedString(@"取消", nil)
                                                    style:UIAlertActionStyleCancel
-                                                 handler:nil]];
+                                                 handler:^(UIAlertAction * _Nonnull action) {
+                                                     dispatch_async(dispatch_get_main_queue(), ^(void){
+                                                         if (cancelHandler) {
+                                                             cancelHandler(controller);
+                                                         }
+                                                     });
+                                                 }]];
     [controller addAction:[UIAlertAction actionWithTitle:destructiveTitle ? destructiveTitle : NSLocalizedString(@"确定", nil)
                                                    style:UIAlertActionStyleDestructive
                                                  handler:^(UIAlertAction * _Nonnull action) {
-                                                     if (destructiveHandler) {
-                                                         destructiveHandler(controller);
-                                                     }
+                                                     dispatch_async(dispatch_get_main_queue(), ^(void){
+                                                         if (destructiveHandler) {
+                                                             destructiveHandler(controller);
+                                                         }
+                                                     });
                                                  }]];
     [self presentViewController:controller animated:YES completion:nil];
     return controller;
@@ -83,18 +119,52 @@
                          destructiveTitle:(NSString *)destructiveTitle
                    textFieldConfiguration:(void (^)(UITextField *textField))textFieldConfiguration
                        destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler {
+    return [self sz_promptWithTitle:title
+                        cancelTitle:nil
+                   destructiveTitle:destructiveTitle
+             textFieldConfiguration:textFieldConfiguration
+                      cancelHandler:nil
+                 destructiveHandler:destructiveHandler];
+}
+
+/**
+ *  带输入框的确认提示, 有取消按钮 和 确认按钮
+ *
+ *  @param title                  标题
+ *  @param cancelTitle            取消按钮标题
+ *  @param destructiveTitle       确认按钮标题
+ *  @param textFieldConfiguration 输入框配置
+ *  @param cancelHandler          取消按钮点击处理
+ *  @param destructiveHandler     确认按钮点击处理
+ *
+ *  @return UIAlertController
+ */
+- (UIAlertController *)sz_promptWithTitle:(NSString *)title
+                              cancelTitle:(NSString *)cancelTitle
+                         destructiveTitle:(NSString *)destructiveTitle
+                   textFieldConfiguration:(void (^)(UITextField *textField))textFieldConfiguration
+                            cancelHandler:(void (^)(UIAlertController * controller))cancelHandler
+                       destructiveHandler:(void (^)(UIAlertController * controller))destructiveHandler {
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:title
                                                                         message:nil
                                                                  preferredStyle:UIAlertControllerStyleAlert];
-    [controller addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"取消", nil)
+    [controller addAction:[UIAlertAction actionWithTitle:cancelTitle ? cancelTitle : NSLocalizedString(@"取消", nil)
                                                    style:UIAlertActionStyleCancel
-                                                 handler:nil]];
+                                                 handler:^(UIAlertAction * _Nonnull action) {
+                                                     dispatch_async(dispatch_get_main_queue(), ^(void){
+                                                         if (cancelHandler) {
+                                                             cancelHandler(controller);
+                                                         }
+                                                     });
+                                                 }]];
     [controller addAction:[UIAlertAction actionWithTitle:destructiveTitle ? destructiveTitle : NSLocalizedString(@"确定", nil)
                                                    style:UIAlertActionStyleDestructive
                                                  handler:^(UIAlertAction * _Nonnull action) {
-                                                     if (destructiveHandler) {
-                                                         destructiveHandler(controller);
-                                                     }
+                                                     dispatch_async(dispatch_get_main_queue(), ^(void){
+                                                         if (destructiveHandler) {
+                                                             destructiveHandler(controller);
+                                                         }
+                                                     });
                                                  }]];
 
     [controller addTextFieldWithConfigurationHandler:textFieldConfiguration];
